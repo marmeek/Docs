@@ -4,5 +4,5 @@ FROM
        ROW_NUMBER() OVER(ORDER BY UnitPrice DESC) AS PriceRank
     FROM Products
    ) AS ProductsWithRowNumber
-WHERE PriceRank > <i>StartRowIndex</i> AND
-    PriceRank <= (<i>StartRowIndex</i> + <i>MaximumRows</i>)
+WHERE PriceRank > StartRowIndex AND
+    PriceRank <= (StartRowIndex + MaximumRows)
